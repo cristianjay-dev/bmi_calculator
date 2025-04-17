@@ -42,16 +42,28 @@ public class MainActivity extends AppCompatActivity {
 
         TextView txtResult = findViewById(R.id.txtResult);
         if (bmi < 18.5) {
-            txtResult.setText("Underweight");
+            txtResult.setText("Result: Underweight");
         } else if (bmi >= 18.5 && bmi <= 24.9) {
-            txtResult.setText("Normal weight");
+            txtResult.setText("Result: Normal weight");
         } else if (bmi >= 25 && bmi <= 29.9) {
-            txtResult.setText("Overweight");
+            txtResult.setText("Result: Overweight");
         } else {
-            txtResult.setText("Obesity");
+            txtResult.setText("Result: Obese");
         }
         TextView txtBmi = findViewById(R.id.txtBMI);
-        txtBmi.setText("BMI: " + String.format("%.2f", bmi));
+        txtBmi.setText("Your BMI is: " + String.format("%.2f", bmi));
 
+    }
+
+    public void onResetClick(View view) {
+        EditText edtTextWeight = findViewById(R.id.edtTxtWeight);
+        EditText edtTextHeight = findViewById(R.id.edtTxtHeight);
+        TextView txtBmi = findViewById(R.id.txtBMI);
+        TextView txtResult = findViewById(R.id.txtResult);
+
+        edtTextWeight.setText("");
+        edtTextHeight.setText("");
+        txtBmi.setText("Your BMI is: ");
+        txtResult.setText("Result: ");
     }
 }
