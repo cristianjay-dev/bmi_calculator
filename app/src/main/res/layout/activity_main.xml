@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="-20dp"
+    tools:layout_editor_absoluteY="38dp">
+
+    <EditText
+        android:id="@+id/edtTxtWeight"
+        android:layout_width="232sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Enter weight (kg)"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/edtTxtHeight"
+        android:layout_width="232sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Enter height (ft.inch)"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/edtTxtWeight"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtTxtWeight"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtWeight" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+        app:srcCompat="@color/design_default_color_secondary"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="415dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="662dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:background="?attr/colorPrimary"
+            android:backgroundTint="#45D526"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:title="BMI Calculator"
+            app:titleTextAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:titleTextColor="#FDFDFD" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="209sp"
+        android:layout_height="56sp"
+        android:layout_marginBottom="196dp"
+        android:text="Calculate"
+        android:backgroundTint="#3AD311"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/edtTxtHeight"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="@+id/edtTxtHeight"
+        android:onClick="onCalculateClick"/>
+
+    <TextView
+        android:id="@+id/txtBMI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Your BMI is: "
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/edtTxtHeight"
+        app:layout_constraintStart_toStartOf="@+id/edtTxtHeight"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtHeight" />
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="Result:"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalculate"
+        app:layout_constraintEnd_toEndOf="@+id/txtBMI"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="@+id/txtBMI"
+        app:layout_constraintTop_toBottomOf="@+id/txtBMI"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
