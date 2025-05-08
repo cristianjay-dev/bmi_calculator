@@ -1,102 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    tools:layout_editor_absoluteX="-20dp"
-    tools:layout_editor_absoluteY="38dp">
+    tools:layout_editor_absoluteX="-20sp"
+    tools:layout_editor_absoluteY="38sp">
 
     <EditText
         android:id="@+id/edtTxtWeight"
         android:layout_width="232sp"
         android:layout_height="50sp"
-        android:layout_marginTop="196dp"
+        android:layout_below="@+id/imgBMI"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16sp"
+        android:background="#454444"
         android:ems="10"
         android:hint="Enter weight (kg)"
+        android:paddingLeft="10sp"
         android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout2" />
+        android:textAlignment="textStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/edtTxtHeight"
         android:layout_width="232sp"
         android:layout_height="50sp"
-        android:layout_marginTop="8dp"
+        android:layout_below="@+id/edtTxtWeight"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8sp"
+        android:background="#454444"
         android:ems="10"
         android:hint="Enter height (ft.inch)"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="@+id/edtTxtWeight"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edtTxtWeight"
-        app:layout_constraintTop_toBottomOf="@+id/edtTxtWeight" />
+        android:paddingLeft="10sp"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/edtTxtAge"
+        android:layout_width="232sp"
+        android:layout_height="50sp"
+        android:layout_below="@+id/edtTxtHeight"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8sp"
+        android:background="#454444"
+        android:ems="10"
+        android:hint="Enter age"
+        android:paddingLeft="10sp"
+        android:inputType="numberDecimal"/>
 
     <Button
         android:id="@+id/btnCalculate"
         android:layout_width="209sp"
         android:layout_height="56sp"
-        android:layout_marginBottom="228dp"
+        android:layout_below="@+id/rbtnFemale"
+        android:layout_marginTop="8sp"
+        android:layout_centerHorizontal="true"
         android:backgroundTint="#3AD311"
         android:onClick="onCalculateClick"
-        android:text="Calculate"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/edtTxtHeight"
-        app:layout_constraintHorizontal_bias="0.521"
-        app:layout_constraintStart_toStartOf="@+id/edtTxtHeight" />
+        android:text="Calculate"/>
 
     <Button
         android:id="@+id/btnReset"
         android:layout_width="209sp"
         android:layout_height="56sp"
-        android:layout_marginBottom="148dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/btnCalculate"
+        android:layout_marginTop="4sp"
         android:backgroundTint="#CCC1C1"
         android:onClick="onResetClick"
-        android:text="Reset"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/edtTxtHeight"
-        app:layout_constraintHorizontal_bias="0.478"
-        app:layout_constraintStart_toStartOf="@+id/edtTxtHeight"
-        app:layout_constraintTop_toBottomOf="@+id/btnCalculate"
-        app:layout_constraintVertical_bias="0.333" />
+        android:text="Reset"/>
 
     <TextView
         android:id="@+id/txtBMI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_below="@+id/btnReset"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16sp"
         android:text="Your BMI is: "
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/edtTxtHeight"
-        app:layout_constraintStart_toStartOf="@+id/edtTxtHeight"
-        app:layout_constraintTop_toBottomOf="@+id/edtTxtHeight" />
+        android:textSize="16sp" />
+
 
     <TextView
         android:id="@+id/txtResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
+        android:layout_below="@+id/txtBMI"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4sp"
         android:text="Result:"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnCalculate"
-        app:layout_constraintEnd_toEndOf="@+id/txtBMI"
-        app:layout_constraintHorizontal_bias="0.485"
-        app:layout_constraintStart_toStartOf="@+id/txtBMI"
-        app:layout_constraintTop_toBottomOf="@+id/txtBMI"
-        app:layout_constraintVertical_bias="0.0" />
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/txtAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4sp"
+        android:layout_below="@+id/txtResult"
+        android:layout_centerHorizontal="true"
+        android:text="Age:"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/txtGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4sp"
+        android:layout_below="@+id/txtAge"
+        android:layout_centerHorizontal="true"
+        android:text="Gender:"
+        android:textSize="16sp"/>
 
     <FrameLayout
         android:id="@+id/frameLayout2"
-        android:layout_width="409dp"
-        android:layout_height="66dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        android:layout_width="match_parent"
+        android:layout_height="66sp"
+        tools:layout_editor_absoluteX="1sp">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar3"
@@ -111,15 +134,34 @@
     </FrameLayout>
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="151dp"
-        android:layout_height="139dp"
-        android:layout_marginTop="100dp"
-        app:layout_constraintBottom_toTopOf="@+id/edtTxtWeight"
+        android:id="@+id/imgBMI"
+        android:layout_width="114sp"
+        android:layout_height="113sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50sp"
+        android:layout_below="@+id/frameLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/frameLayout2"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/bmi" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RadioButton
+        android:id="@+id/rbtnFemale"
+        android:layout_width="108dp"
+        android:layout_height="49dp"
+        android:layout_below="@+id/edtTxtAge"
+        android:layout_marginStart="90sp"
+        android:layout_marginTop="13dp"
+        android:text="Female"/>
+
+    <RadioButton
+        android:id="@+id/rbtnMale"
+        android:layout_width="87dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="235dp"
+        android:layout_below="@+id/edtTxtAge"
+        android:layout_marginTop="13dp"
+        android:text="Male" />
+
+</RelativeLayout>
