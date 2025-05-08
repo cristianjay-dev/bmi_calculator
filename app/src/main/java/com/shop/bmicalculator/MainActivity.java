@@ -1,8 +1,10 @@
 package com.shop.bmicalculator;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -52,18 +54,38 @@ public class MainActivity extends AppCompatActivity {
         }
         TextView txtBmi = findViewById(R.id.txtBMI);
         txtBmi.setText("Your BMI is: " + String.format("%.2f", bmi));
+        EditText edtTxtAge = findViewById(R.id.edtTxtAge);
+        int age = Integer.parseInt(edtTxtAge.getText().toString());
+        TextView txtAge = findViewById(R.id.txtAge);
+        txtAge.setText("Age: " + age);
+        RadioButton rbtnMale = findViewById(R.id.rbtnMale);
+        RadioButton rbtnFemale = findViewById(R.id.rbtnFemale);
+        TextView txtGender = findViewById(R.id.txtGender);
+        if (rbtnMale.isChecked()) {
+            txtGender.setText("Gender: Male");
+        } else if (rbtnFemale.isChecked()) {
+            txtGender.setText("Gender: Female");
+        }
 
     }
 
     public void onResetClick(View view) {
         EditText edtTextWeight = findViewById(R.id.edtTxtWeight);
         EditText edtTextHeight = findViewById(R.id.edtTxtHeight);
+        EditText edtTextAge = findViewById(R.id.edtTxtAge);
+        RadioButton rbtnMale = findViewById(R.id.rbtnMale);
+        RadioButton rbtnFemale = findViewById(R.id.rbtnFemale);
         TextView txtBmi = findViewById(R.id.txtBMI);
         TextView txtResult = findViewById(R.id.txtResult);
+        TextView txtAge = findViewById(R.id.txtAge);
 
+        rbtnMale.setChecked(false);
+        rbtnFemale.setChecked(false);
         edtTextWeight.setText("");
         edtTextHeight.setText("");
+        edtTextAge.setText("");
         txtBmi.setText("Your BMI is: ");
         txtResult.setText("Result: ");
+        txtAge.setText("Age: ");
     }
 }
