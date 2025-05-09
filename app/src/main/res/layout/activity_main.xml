@@ -16,11 +16,11 @@
         android:layout_height="50sp"
         android:layout_below="@+id/imgBMI"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16sp"
+        android:layout_marginTop="16dp"
         android:background="#454444"
         android:ems="10"
         android:hint="Enter weight (kg)"
-        android:paddingLeft="10sp"
+        android:paddingLeft="10dp"
         android:inputType="numberDecimal"
         android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -32,11 +32,11 @@
         android:layout_height="50sp"
         android:layout_below="@+id/edtTxtWeight"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="8sp"
+        android:layout_marginTop="8dp"
         android:background="#454444"
         android:ems="10"
         android:hint="Enter height (ft.inch)"
-        android:paddingLeft="10sp"
+        android:paddingLeft="10dp"
         android:inputType="numberDecimal" />
 
     <EditText
@@ -45,11 +45,11 @@
         android:layout_height="50sp"
         android:layout_below="@+id/edtTxtHeight"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="8sp"
+        android:layout_marginTop="8dp"
         android:background="#454444"
         android:ems="10"
         android:hint="Enter age"
-        android:paddingLeft="10sp"
+        android:paddingLeft="10dp"
         android:inputType="numberDecimal"/>
 
     <Button
@@ -57,7 +57,7 @@
         android:layout_width="209sp"
         android:layout_height="56sp"
         android:layout_below="@+id/rgbtnGender"
-        android:layout_marginTop="8sp"
+        android:layout_marginTop="8dp"
         android:layout_centerHorizontal="true"
         android:backgroundTint="#3AD311"
         android:onClick="onCalculateClick"
@@ -69,7 +69,7 @@
         android:layout_height="56sp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/btnCalculate"
-        android:layout_marginTop="4sp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="#CCC1C1"
         android:onClick="onResetClick"
         android:text="Reset"/>
@@ -80,7 +80,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnReset"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16sp"
+        android:layout_marginTop="16dp"
         android:text="Your BMI is: "
         android:textSize="16sp" />
 
@@ -91,7 +91,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtBMI"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="4sp"
+        android:layout_marginTop="8dp"
         android:text="Result:"
         android:textSize="16sp"/>
 
@@ -99,7 +99,7 @@
         android:id="@+id/txtAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4sp"
+        android:layout_marginTop="8dp"
         android:layout_below="@+id/txtResult"
         android:layout_centerHorizontal="true"
         android:text="Age:"
@@ -109,7 +109,7 @@
         android:id="@+id/txtGender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4sp"
+        android:layout_marginTop="8dp"
         android:layout_below="@+id/txtAge"
         android:layout_centerHorizontal="true"
         android:text="Gender:"
@@ -138,7 +138,7 @@
         android:layout_width="114sp"
         android:layout_height="113sp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50sp"
+        android:layout_marginTop="50dp"
         android:layout_below="@+id/frameLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -157,8 +157,8 @@
 
         <RadioButton
             android:id="@+id/rbtnFemale"
-            android:layout_width="108dp"
-            android:layout_height="49dp"
+            android:layout_width="108sp"
+            android:layout_height="49sp"
             android:text="Female"
             android:layout_marginRight="8sp"/>
 
