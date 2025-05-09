@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         txtAge.setText("Age: " + age);
         RadioButton rbtnMale = findViewById(R.id.rbtnMale);
         RadioButton rbtnFemale = findViewById(R.id.rbtnFemale);
+
         TextView txtGender = findViewById(R.id.txtGender);
         if (rbtnMale.isChecked()) {
             txtGender.setText("Gender: Male");
